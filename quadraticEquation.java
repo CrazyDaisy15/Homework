@@ -3,16 +3,16 @@ public class quadraticEquation {
     public static void main(String[] Strings) {
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Input a: ");
+        System.out.print("A: ");
         double a = input.nextDouble();
-        System.out.print("Input b: ");
+        System.out.print("B: ");
         double b = input.nextDouble();
-        System.out.print("Input c: ");
+        System.out.print("C: ");
         double c = input.nextDouble();
 
         double descriminant = b * b - 4.0 * a * c;
-        double r1 = (-b + Math.pow(descriminant, 0.5)) / (2.0 * a);
-        double r2 = (-b - Math.pow(descriminant, 0.5)) / (2.0 * a);
-        System.out.println("The roots are " + r1 + " and " + r2);
+        double root1 = (-b + Math.pow(descriminant, 0.5)) / (2.0 * a);
+        double root2 = (-b - Math.pow(descriminant, 0.5)) / (2.0 * a);
+        System.out.println("The roots are " + root1 + " and " + root2);
     }
 }
