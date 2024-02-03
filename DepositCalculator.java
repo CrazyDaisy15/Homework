@@ -8,7 +8,6 @@ public class DepositCalculator {
         int depositTerm = Integer.parseInt(scan.nextLine());
         System.out.print("Annual Nominal Interest Rate = ");
         double annualNominalInterestRate = Double.parseDouble(scan.nextLine());
-
         double totalInterest = depositAmount * (annualNominalInterestRate / 100);
         double interestPerMonth = totalInterest / 12;
         double totalAmount = depositAmount + (depositTerm * interestPerMonth);
