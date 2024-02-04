@@ -1,4 +1,3 @@
-import com.sun.source.util.SourcePositions;
 public class largestNumber {
 public static void main(String[] args) {
     int[] numbers = {8, 3, 15, 1, 6};
