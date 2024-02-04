@@ -7,7 +7,7 @@ public class loopIterationList {
                 break;
             }
             if (number % 5 == 0) {
-                System.out.print(number + ", ");
+                System.out.print(number + " ");
             }
         }
     }
