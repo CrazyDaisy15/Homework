@@ -6,17 +6,18 @@ public class FixThisCode {
         FileWriter fileWriter = null;
         try {
             fileWriter = new FileWriter(filePath, true);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } catch (IOException e) { //ако append е false - извиква грешка
+            throw new RuntimeException(e); //НО продължава да изпълнява кода надолу
         }
-        return fileWriter;
+        return fileWriter; //ако е true, връща/отваря fileWriter
     }
     protected static void closeFileWriter(FileWriter fileWriter) throws IOException {
         fileWriter.close();
     }
     public static void printToFile(FileWriter fileWriter, String text, int repeat) throws IOException {
         for (int i = 0; i < repeat; i++) {
-            fileWriter.write(text + "\n");
+            fileWriter.write(text + "\n"); //hello 5 - изписва 5 пъти hello
+            closeFileWriter(fileWriter);
         }
     }
     public static void main(String[] args) throws IOException {
@@ -25,5 +26,6 @@ public class FixThisCode {
         int howManyTimesToPrintTheTextToFile = scanner.nextInt();
         String textToAdd = scanner.nextLine();
         printToFile(getFileWriter(filePath), textToAdd, howManyTimesToPrintTheTextToFile);
+        //3 аргумента - първото създава, после добавя текст, накрая колко пъти ще се принтира текста във файла
     }
 }
