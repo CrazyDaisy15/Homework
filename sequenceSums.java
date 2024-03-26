@@ -14,7 +14,7 @@ public class sequenceSums {
 
         int sum = 0;
         int n = sequence.size() / 2;
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             sum += sequence.get(i) + sequence.get(sequence.size() - 1 - i);
         }
         System.out.println("Sum: " + sum);
